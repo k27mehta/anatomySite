@@ -1,0 +1,107 @@
+<HTML>
+<center> <p><font face="Bradley Hand ITC" size="95" color="white"><b>
+Hand Muscles</b>
+</font></p></center> 
+<body bgcolor="black">
+<IMG STYLE="position:absolute; TOP:120px; LEFT:18px; WIDTH:442px; HEIGHT:542px" SRC="Hand muscle.png">
+<IMG STYLE="position:absolute; TOP:120px; LEFT:970px; WIDTH:342px; HEIGHT:500px" SRC="Deep Hand.png">
+<FONT STYLE="position:absolute; TOP:250px; LEFT:290px; WIDTH:842px; HEIGHT:542px">
+<p><b><font face="Bradley Hand ITC" size="4.5" color="FFC0FF"></b><p> 
+<center> State "True" or "False" for questions related to the pictures:
+<br />Question <span id="NumberAsked">1</span> out of 10 with <span id="NumberCorrect">0</span> answers correct</p>
+<p><span id="q&a">
+</span> </p>
+<p> <input id="Truth" type="radio" value="true" name="answer" checked="checked" /> True
+<input id="Fake" type="radio" value="false" name="answer" /> False </p>
+<p><input id="butt" onclick="checkAnswer();" type="button" value="continue" /></p>
+<script language="javascript" type="text/javascript"> var info = new Array(10)
+createTwoDimensionalArray(3);
+var questionsAsked = 0;
+var rightques = 0;
+var nowQ = 0;
+var yes = false; info[0][0] = "#1 is the 1st Lumbrical";
+info[1][0] = "#14 is Abductor Pollicis Longus";
+info[2][0] = "#12 is superficial to #11";
+info[3][0] = "#4,#5, and #6 are part of the thenar muscles";
+info[4][0] = "#23 is the extensor retinaculum";
+info[5][0] = "#21 is a border of the anatomical snuff box";
+info[6][0] = "#14 is abductor pollicis brevis";
+info[7][0] = "#2 is the third lumbrical";
+info[8][0] = "#10 is the pisiform bone";
+info[9][0] = "#19 is the border of the anatomical snuff box";
+info[0][1] = "true";
+info[2][1] = "true";
+info[3][1] = "false";
+info[4][1] = "false";
+info[1][1] = "false";
+info[5][1] = "true";
+info[6][1] = "true";
+info[7][1] = "false";
+info[8][1] = "true";
+info[9][1] = "false";
+info[0][2] = "NOPE";
+info[1][2] = "NOPE";
+info[2][2] = "NOPE";
+info[3][2] = "NOPE";
+info[4][2] = "NOPE";
+info[5][2] = "NOPE";
+info[6][2] = "NOPE";
+info[7][2] = "NOPE";
+info[8][2] = "NOPE";
+info[9][2] = "NOPE";
+setQuestion();function setQuestion() {
+yes = false; while (yes == false) {
+nowQ = Math.floor(Math.random() * 10); 
+if (info[nowQ][2] == "NOPE") {
+yes = true; }}document.getElementById("q&a").innerHTML = info[nowQ][0];info[nowQ][2] = "yes";questionsAsked = questionsAsked + 1;}
+function processAnswer(myAnswer) {if (info[nowQ][1] == myAnswer) {rightques = rightques + 1;}}
+function createTwoDimensionalArray(arraySize) { for (i = 0; i < info.length; ++i)
+info[i] = new Array(arraySize); }function checkAnswer() { if (document.getElementById("Truth").checked) {processAnswer("true"); }
+else { processAnswer("false");}if (questionsAsked < 10) {setQuestion();} else {alert("Quiz complete! You got " + rightques + " correct out of 10.");
+document.getElementById("butt").disabled = true;}
+document.getElementById("NumberAsked").innerHTML = questionsAsked;
+document.getElementById("NumberCorrect").innerHTML = rightques;}
+</script>
+</center>
+<FONT STYLE="position:absolute; TOP:400px; LEFT:118px; WIDTH:542px; HEIGHT:42px">
+<font color="red">
+<marquee behavior="alternate"><b>The muscles of the hand are really handy!</marquee></b>
+<FONT STYLE="position:absolute; TOP:-650px; LEFT:800px; WIDTH:200px; HEIGHT:102px"><font face="Bradley Hand ITC" size="3" color="white"> <b>By:Kritika Mehta </p></b>
+<IMG STYLE="position:absolute; TOP:720px; LEFT:-1100px; WIDTH:342px; HEIGHT:500px" SRC="DABS.png">
+<IMG STYLE="position:absolute; TOP:720px; LEFT:-700px; WIDTH:342px; HEIGHT:500px" SRC="PADS.png">
+<IMG STYLE="position:absolute; TOP:720px; LEFT:-300px; WIDTH:342px; HEIGHT:500px" SRC="Lumbricals.png">
+</body>
+<FONT STYLE="position:absolute; TOP:800px; LEFT:-20px; WIDTH:140px; HEIGHT:42px">
+<button onclick="myFunctions()">Q:Who are we?</button>
+<p id="de"></p>
+<script>
+function myFunctions(){document.getElementById("de").innerHTML = "A: We are the 4 Lumbricals";}
+</script>
+<FONT STYLE="position:absolute; TOP:300px; LEFT:-390px; WIDTH:142px; HEIGHT:42px">
+<button onclick="myFunctionz()">Q:The 3 of us are?</button>
+<p id="me"></p>
+<script>
+function myFunctionz(){document.getElementById("me").innerHTML = "A: We are the 3 Palmar Interossei";}
+</script>
+<FONT STYLE="position:absolute; TOP:25px; LEFT:-420px; WIDTH:142px; HEIGHT:42px">
+<button onclick="myFunctione()">Q:The 4 of us are?</button>
+<p id="pe"></p>
+<script>
+function myFunctione(){document.getElementById("pe").innerHTML = "A: We are the 4 Dorsal Interossei";}
+</script>
+<center>
+<FONT STYLE="position:absolute; TOP:-420px; LEFT:-370px; WIDTH:242px; HEIGHT:542px">
+<p><b><font face="Berlin Sans FB Bold" size="4.5" color="FFC0FF"></b><p> 
+<p> Use the pictures to describe the hand muscles. Click the question to see the answer! </p>
+</center>
+<IMG STYLE="position:absolute; TOP:600px; LEFT:100px; WIDTH:1142px; HEIGHT:800px" SRC="chart.png">
+<IMG STYLE="position:absolute; TOP:1400px; LEFT:100px; WIDTH:1142px; HEIGHT:300px" SRC="charttwo.png">
+<center> <p><FONT STYLE="position:absolute; TOP:540px; LEFT:300px; WIDTH:742px; HEIGHT:32px"><font face="Bradley Hand ITC" size="35" color="white"><b>
+Muscles of the Hand </b>
+</font></p></center> 
+
+<FONT STYLE="position:absolute; TOP:1190px; LEFT:-150px; WIDTH:942px; HEIGHT:542px">
+<p> <b>REFERENCES: 
+<br> Moore, K. L., Dalley, A. F., & Agur, A. M. (2006). Clinically oriented anatomy (7th ed.). Philadelphia: Lippincott Williams & Wilkins.
+<br>
+</html>
